@@ -14,7 +14,7 @@ namespace SpecFlowAutomation.Pages
         private string URL => "https://specflow.org/";
         private string MainMenuItemXpath => "//div[@id='top-menu']/ul/li";
 
-        private string SubMenuItemXpath => "//ul[@class='sub-menu']/li/a";
+        private string SubMenuItemXpath => "//div[@id='top-menu']//a";
 
         private static HomePage homePage;
         public static HomePage Instance => homePage ?? (homePage = new HomePage());

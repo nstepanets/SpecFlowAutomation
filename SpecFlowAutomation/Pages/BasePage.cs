@@ -8,6 +8,7 @@ namespace SpecFlowAutomation.Pages
 {
     public class BasePage
     {
+        private string TitleXpath => "//h1[text()='{0}']";
         public BasePage()
         {
 
@@ -27,6 +28,11 @@ namespace SpecFlowAutomation.Pages
         {
             var wait = new WebDriverWait(DriverManager.Instance(), TimeSpan.FromSeconds(timeout));
             return wait.Until(d => DriverManager.Instance().FindElement(locator).Displayed);
+        }
+
+        public bool IsPageTitleDisplayed(string pageTitle)
+        {
+            return IsDisplayed(By.XPath(string.Format(TitleXpath, pageTitle)));
         }
     }
 }

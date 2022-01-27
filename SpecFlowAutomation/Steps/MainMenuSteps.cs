@@ -9,12 +9,7 @@ namespace SpecFlowAutomation.Steps
     [Binding]
     public sealed class MainMenuSteps
     {
-        private readonly ScenarioContext context;
-        public MainMenuSteps(ScenarioContext injectedContext)
-        {
-            context = injectedContext;
-        }
-
+        
         [Given(@"I open official SpecFlow website")]
         public void OpenOfficialSpecFlowWebsite()
         {

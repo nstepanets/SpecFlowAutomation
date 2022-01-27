@@ -12,5 +12,6 @@ Scenario Outline: Clicking menu option from the main menu should open correspond
 	Then Page with '<title>' title should be opened
 
 	Examples: 
-	| menuItem | subMenuItem | title                                |
-	| Docs     | SpecFlow    | Welcome to SpecFlow’s documentation! |
+	| menuItem      | subMenuItem | title                                                     |
+	| Docs          | SpecFlow    | Welcome to SpecFlow’s documentation!                      |
+	| Why SpecFlow? | Testers     | Apply your skills throughout the entire development cycle |

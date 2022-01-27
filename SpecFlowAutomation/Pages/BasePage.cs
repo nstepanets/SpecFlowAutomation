@@ -8,7 +8,7 @@ namespace SpecFlowAutomation.Pages
 {
     public class BasePage
     {
-        private string TitleXpath => "//h1[text()='{0}']";
+        private string TitleXpath => "//h1[contains(text(), '{0}')]";
         public BasePage()
         {
 

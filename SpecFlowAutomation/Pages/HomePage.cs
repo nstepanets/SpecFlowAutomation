@@ -27,14 +27,14 @@ namespace SpecFlowAutomation.Pages
         public void HoverMainMenuItem(string item)
         {
             var actions = new Actions(DriverManager.Instance());
-            var menuItem = FindElements(By.XPath(MainMenuItemXpath)).First(x => x.Text.Equals(item));
+            var menuItem = FindElements(By.XPath(MainMenuItemXpath)).Single(x => x.Text.Equals(item));
 
             actions.MoveToElement(menuItem).Perform();
         }
 
         public void ClickSubMenuItem(string item)
         {
-            var subMenuItem = FindElements(By.XPath(SubMenuItemXpath)).First(x => x.Text.Equals(item));
+            var subMenuItem = FindElements(By.XPath(SubMenuItemXpath)).Single(x => x.Text.Equals(item));
             subMenuItem.Click();
         }
     }

@@ -23,6 +23,7 @@ namespace SpecFlowAutomation.Base
         public static void QuitDriver()
         {
             Instance().Quit();
+            driver.Value = null;
         }
     }
 }

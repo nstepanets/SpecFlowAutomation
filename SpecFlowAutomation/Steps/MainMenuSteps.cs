@@ -34,7 +34,7 @@ namespace SpecFlowAutomation.Steps
             Assert.IsTrue(GettingStartedPage.Instance.IsPageTitleDisplayed(title), "Page title for the page is not displayed");
         }
 
-        [AfterTestRun]
+        [AfterScenario]
         public static void AfterTestRun()
         {
             DriverManager.QuitDriver();
